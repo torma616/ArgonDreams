@@ -1,0 +1,34 @@
+:root {
+  --argonBrightness: 0%; /* Controls how close to white the letters get */
+  --argonGlow: 0% /* Controls how much glow there is around the letters */
+}
+
+.mtk11 {
+  color: #ece79e;
+  /* If a color is set, script will apply effect to this color for this
+  class and exclude bracket pairs (.mtk11:not([class*="bracket-highlighting"]),
+  unless .argonBrackets is included like below */
+  --argon-dreams: true;
+}
+
+.argonBrackets, /* Makes bracket pairs glow */
+.mtk10,
+.mtk16,
+.mtk19 {
+  --argon-dreams: true;
+}
+
+/* This rule would make everything glow */
+/*
+.argonAll { 
+--argon-dreams: true
+}
+*/
+/*
+.argonAll=everything below .argonBrackets=.monaco-editor .bracket-highlighting-[0-29] .mtk[1-22],
+mtki,
+mtkb,
+mtku,
+mtks,
+mtks.mtku
+*/
